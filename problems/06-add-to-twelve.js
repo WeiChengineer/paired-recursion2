@@ -13,9 +13,35 @@ addToTwelve([1]); // false
 ***********************************************************************/
 
 
-function addToTwelve(arr) {
-  // Your code here 
+function addToTwelve(arr, i=0) {
+  // Your code here
+  //BASE case  arr[i]  + arr[i-1] !== 12 return false
+
+  // if(arr.length < 2){
+  //   return false
+  // }
+
+//   if(arr[i]  + arr[i + 1] !== 12){
+//    return false
+//   }
+
+//   if(i > 0){
+//     let sum = arr[i] + arr[i + 1]
+//     sum = true
+//   }
+// return addToTwelve(arr, i+1 )
+// }
+
+  if(i > arr.length - 2)return false;
+  if(arr[i] + arr[i+1] === 12)return true;
+return addToTwelve(arr, i+ 1)
+
 }
+console.log(addToTwelve([1, 3, 4, 7, 5])); // true
+console.log(addToTwelve([1, 3, 4, 7, 6])); // false
+console.log(addToTwelve([1, 11, 4, 7, 6])); // true
+console.log(addToTwelve([1, 12, 4, 7, 6])); // false
+console.log(addToTwelve([1])); // false
 
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
