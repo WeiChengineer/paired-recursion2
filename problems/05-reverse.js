@@ -4,20 +4,30 @@ it reversed.
 
 Examples:
 
-reverse("house"); // "esuoh"
-reverse("dog"); // "god"
-reverse("atom"); // "mota"
-reverse("q"); // "q"
-reverse("id"); // "di"
-reverse(""); // ""
 ***********************************************************************/
 
 
 function reverse(str) {
-  // Your code here 
+
+  //base case str.length <= 1
+  if(str.length <= 1) {
+    return str
+  }
+
+  //recursive case return string backwards
+ return str[str.length - 1] + (reverse(str.slice(0, str.length - 1))
+
+  //recursive step itierate
+
 }
 
 
+reverse("house"); // "esuoh"
+// reverse("dog"); // "god"
+// reverse("atom"); // "mota"
+// reverse("q"); // "q"
+// reverse("id"); // "di"
+// reverse(""); // ""
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
   module.exports = reverse;
