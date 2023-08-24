@@ -20,10 +20,25 @@ exponent(2, -2); // 1/4 (or 0.25)
 exponent(5, 5); // 3125
 ***********************************************************************/
 
+// function exponent(num, power) {
+//    if (power == 0) return 0
+//    if (power > 0) {
+//     return num 
+//    }
+//     return exponent((num * num) * power)
+// }
+
 function exponent(num, power) {
-    // Your code here 
+    if (power === 0) {
+        return 1
+    }
+    if (power > 0) {
+        return num * exponent(num, power - 1)
+    }
+    else {
+        return exponent(1 / num, -power)
+    }
 }
-  
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
     module.exports = exponent;
