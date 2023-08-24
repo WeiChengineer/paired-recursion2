@@ -15,7 +15,7 @@ function reverse(str) {
   }
 
   //recursive case return string backwards
- return str[str.length - 1] + (reverse(str.slice(0, str.length - 1))
+ return str[str.length - 1] + reverse(str.slice(0, str.length - 1))
 
   //recursive step itierate
 
